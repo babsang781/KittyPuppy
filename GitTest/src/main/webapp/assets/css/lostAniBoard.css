@@ -161,9 +161,6 @@ h1 {
 /* 상단 로고 고정 */
 .header-logo {
 	position: fixed; /*상단에 고정된 플렉스 박스 */
-	left: 0;
-	right: 0;
-	top: 0;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -264,15 +261,12 @@ img {
 		padding-top: 15px;
 		width: 800px;
 		text-align: center;
-		max-width: 800px;
 		z-index: 2;
 	}
 
 	/* 상단 메뉴바 설정 */
 	.header-menu {
 		width: 800px;
-		min-width: 800px;
-		max-width: 800px;
 		justify-content: space-evenly;
 	}
 	.icon {

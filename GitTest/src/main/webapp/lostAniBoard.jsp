@@ -64,24 +64,19 @@ pageContext.setAttribute("lostList", lostList);
 </head>
 <body>
 	<div class="container out b">
-
-		<!-- 키티퍼피 로고 -->
 		<div class="header-logo  b">
 			<i class="bi bi-exclamation-octagon-fill hidden b"></i>
 			<h1 class="text-center b">KittyPuppy</h1>
 			<a href="lostAniReport.html"><i id='report'
 				class="bi bi-exclamation-octagon-fill b"></i></a>
 		</div>
-
-		<br>
-		<!-- 상단 고정된 메뉴바 -->
 		<div class='text-center banner header-menu b'>
-			<a href="feed.jsp"><i class="bi bi-phone icon b"></i></a> <a
-				href="lostAniBoard.jsp"><i id="megaphone-fill"
-				class="bi bi-megaphone-fill icon megaphone b"></i></a> <a
-				href="maps.jsp"><i class="bi bi-geo-alt icon b"></i></a> <a
-				href="mypage.jsp"><i class="bi bi-person icon b"></i></a> <a
-				href="dmList.jsp"><i class="bi bi-chat-dots icon b"></i></a>
+			<a href="feed.jsp"><i class="bi bi-phone icon b"></i></a> 
+			<a href="lostAniBoard.jsp"><i id="megaphone-fill"
+				class="bi bi-megaphone-fill icon megaphone b"></i></a> 
+			<a href="maps.jsp"><i class="bi bi-geo-alt icon b"></i></a> 
+			<a href="mypage.jsp"><i class="bi bi-person icon b"></i></a> 
+			<a href="dmList.jsp"><i class="bi bi-chat-dots icon b"></i></a>
 		</div>
 		
 		<!-- 검색 바... : 거대한 검색 버튼... 이거 좀 바꿔야 할 듯 -->
