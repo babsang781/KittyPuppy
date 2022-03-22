@@ -27,7 +27,7 @@
 - 서버환경 : tomcat 8.5
 - 데이터베이스 : oracle
 - 빌드도구 : maven
-- 일정관리 : notion, GitHub
+- 일정관리 : Notion, GitHub
   <br>notion 링크 https://www.notion.so/9c12233b0b5c4eb9b2e55f6999f481bb
 ## 개발 기간
 ![image](https://user-images.githubusercontent.com/95062638/156504648-8b355ba9-5e2a-4e3d-a6b2-f240a8f589c6.png)
