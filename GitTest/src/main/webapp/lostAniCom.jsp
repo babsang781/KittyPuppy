@@ -3,9 +3,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page import="com.kittypuppy.model.*"%>
 <%@ page import="com.kittypuppy.service.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix='fn' uri="http://java.sun.com/jsp/jstl/functions"%>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%
 // 로그인 회원정보 저장
 MemberDTO member = (MemberDTO) session.getAttribute("member");

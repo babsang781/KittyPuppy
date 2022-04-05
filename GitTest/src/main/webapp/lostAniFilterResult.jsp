@@ -32,18 +32,20 @@ pageContext.setAttribute("lostList", lostList);
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+
 <!-- Google Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
 	href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
 	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-<script src="js/bootstrap.min.js"></script>
 <!-- moment.js cdn : 날짜 형태 변환 라이브러리 -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
@@ -54,52 +56,35 @@ pageContext.setAttribute("lostList", lostList);
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
-<link rel="stylesheet"
-	href="https://bootsnipp.com/dist/bootsnipp.min.css"
-	crossorigin="anonymouse">
-<link rel="stylesheet"
-	href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-	integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-	crossorigin="anonymous" />
-
-<!-- Custom styles for this template -->
-<link href="narrow-jumbotron.css" rel="stylesheet">
+<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+    integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous' />
 
 <!-- lostAniBoard css 파일 -->
-<link href="./assets/css/lostAniBoard.css" rel="stylesheet">
-
+<link href="./assets/css/lostAniBoard.css?ver=0.9.0.3" rel="stylesheet">
 
 </head>
 <body>
 	<div class="container out b">
-
-		<!-- 키티퍼피 로고 -->
 		<div class="header-logo  b">
 			<i class="bi bi-exclamation-octagon-fill hidden b"></i>
 			<h1 class="text-center b">KittyPuppy</h1>
 			<a href="lostAniReport.html"><i id='report'
 				class="bi bi-exclamation-octagon-fill b"></i></a>
 		</div>
-
-		<br>
-		<!-- 상단 고정된 메뉴바 -->
 		<div class='text-center banner header-menu b'>
-			<a href="feed.jsp"><i class="bi bi-phone icon b"></i></a> <a href="lostAniBoard.jsp"><i
-				id="megaphone-fill" class="bi bi-megaphone-fill icon megaphone b"></i></a>
-			<a href="maps.jsp"><i class="bi bi-geo-alt icon b"></i></a> <a
-				href="mypage.jsp"><i class="bi bi-person icon b"></i></a> <a
-				href="dmList.jsp"><i class="bi bi-chat-dots icon b"></i></a>
+			<a href="feed.jsp"><i class="bi bi-phone icon b"></i></a> 
+			<a href="lostAniBoard.jsp"><i id="megaphone-fill"
+				class="bi bi-megaphone-fill icon megaphone b"></i></a> 
+			<a href="maps.jsp"><i class="bi bi-geo-alt icon b"></i></a> 
+			<a href="mypage.jsp"><i class="bi bi-person icon b"></i></a> 
+			<a href="dmList.jsp"><i class="bi bi-chat-dots icon b"></i></a>
 		</div>
-
+		
 		<!-- 검색 바... : 거대한 검색 버튼... 이거 좀 바꿔야 할 듯 -->
-		<div id="search" class="row b justify-content-center">
+		<div id="search" class=" b justify-content-center input-group rounded ">
 			<div class="input-group searchInput b">
-				<div class="input-group-prepend">
-					<span class="input-group-text material-icons" id="basic-addon3">
-						search </span>
-				</div>
-				<input type="text" class="form-control" id="basic-url"
-					aria-describedby="basic-addon3" />
+				<input name='search' type='search' class='form-control rounded'/>
+				<span class="material-icons" style="font-size:40px;">search</span>
 			</div>
 		</div>
 
@@ -133,19 +118,18 @@ pageContext.setAttribute("lostList", lostList);
 									<c:when test="${lost.laType eq '완료'}">
 										<span class="laType"style="color:#bdbdbd;">[${lost.laType}]</span>
 									</c:when>		
-									<c:otherwise >
+									<c:otherwise> 
 										<span class="laType"style="color:#bdbdbd;">[${lost.laType}]</span>
 									</c:otherwise>
 								</c:choose>
-									<span
-										class="lakind">${lost.kind}</span>
+									<span class="lakind">${lost.kind}</span>
 								</h5>
 								<p class="card-text">
-									<span>${lost.getSex()}</span> <span>${lost.getAniSize()}</span><br>
-									<sapn><i class="bi bi-calendar3 innerIcon"></i> 등록일: </sapn><span class="boardDate">
-										${lost.getLaDate()}</span> <br> <span
-										class="material-icons innerIcon">location_on</span><span>위치
-										: ${lost.getPlace()} </span>
+									<span>${lost.sex}</span> <span>${lost.aniSize}</span> <span>${lost.aniName }</span><br>
+									<span> <i class="bi bi-calendar3 innerIcon"></i> 등록일: </span>
+									<span class="boardDate"> ${lost.laDate}</span> <br> 
+									<span class="material-icons innerIcon">location_on</span>
+									<span>위치: ${lost.place} </span>
 								</p>
 							</div>
 						</div>
@@ -219,19 +203,12 @@ pageContext.setAttribute("lostList", lostList);
 		</div>
 	</div>
 
-	<!-- Optional JavaScript; choose one of the two! -->
-
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
 
-	<!-- Option 2: Separate Popper and Bootstrap JS -->
-	<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 
 	<script>
 	// 날짜 형식 변경 라이브러리
